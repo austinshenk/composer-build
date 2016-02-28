@@ -1,19 +1,28 @@
 {
-  "name": "composer",
+  "name": "composer-build",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Build project for Composer project",
+  "repository": "https://github.com/austinshenk/composer-build",
   "scripts": {
-    "start": "node index.js",
-    "scss": "node-sass --output-style compressed -o assets/css build/"
-  },
-  "dependencies": {
-    "ejs": "2.3.3",
-    "express": "4.13.3",
-    "compression": "1.6.1"
+    "build": "npm run build:css && npm run build:js && npm run build:icons",
+    "build:css": "node-sass --output-style compressed -o ../composer/assets/css assets/scss",
+    "build:js": "npm run build:js:reader",
+    "build:js:reader": "npm run build:js:reader:lint && npm run build:js:reader:uglify",
+    "build:js:reader:lint": "eslint assets/js",
+    "build:js:reader:uglify": "uglifyjs assets/js/reader/CSSPlugin.min.js assets/js/reader/TimelineMax.min.js assets/js/reader/TweenLite.min.js assets/js/reader/zepto.min.js -m -c -o ../composer/assets/js/reader.min.js",
+    "build:icons": "npm run build:icons:reader",
+    "build:icons:reader": "svgo -f assets/svg/reader && svg-sprite-generate -d assets/svg/reader -o ../composer/views/partials/icons.ejs"
   },
   "engines": {
     "node": "0.12.7"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "basscss-sass": "^4.0.0",
+    "eslint": "^2.2.0",
+    "node-sass": "^3.4.2",
+    "svg-sprite-generator": "0.0.7",
+    "svgo": "^0.6.1",
+    "uglify-js": "^2.6.2"
+  }
 }

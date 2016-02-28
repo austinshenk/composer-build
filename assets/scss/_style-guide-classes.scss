@@ -1,0 +1,39 @@
+.bg-primary {
+	background-color: $sg-primary-bg;
+}
+.bg-secondary {
+	background-color: $sg-secondary-bg;
+}
+.bg-action {
+	background-color: $sg-action;
+}
+.bg-success {
+	background-color: $sg-success;
+}
+.bg-error {
+	background-color: $sg-error;
+}
+.color-default {
+	color: $sg-default;
+}
+.color-alternate {
+	color: $sg-alternate;
+}
+.color-action {
+	color: $sg-action;
+}
+.color-success {
+	color: $sg-success;
+}
+.color-error {
+	color: $sg-error;
+}
+.border, .border-top, .border-bottom, .border-left, .border-right {
+	border-color: $sg-border;
+}
+.btn-outline,
+.btn-outline:hover {
+	border-color: $sg-border;
+	color: $sg-default;
+	background-color: $sg-primary-bg;
+}
