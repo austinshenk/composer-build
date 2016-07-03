@@ -1,39 +1,61 @@
-.bg-primary {
+%bg-primary {
 	background-color: $sg-primary-bg;
 }
-.bg-secondary {
+%bg-secondary {
 	background-color: $sg-secondary-bg;
 }
-.bg-action {
+%bg-action {
 	background-color: $sg-action;
 }
-.bg-success {
+%bg-success {
 	background-color: $sg-success;
 }
-.bg-error {
+%bg-error {
 	background-color: $sg-error;
 }
-.color-default {
+%color-default {
 	color: $sg-default;
 }
-.color-alternate {
+%color-alternate {
 	color: $sg-alternate;
 }
-.color-action {
+%color-action {
 	color: $sg-action;
 }
-.color-success {
+%color-success {
 	color: $sg-success;
 }
-.color-error {
+%color-error {
 	color: $sg-error;
 }
-.border, .border-top, .border-bottom, .border-left, .border-right {
-	border-color: $sg-border;
+
+[#{$am}-sg-bg='primary'] {
+	@extend %bg-primary;
 }
-.btn-outline,
-.btn-outline:hover {
-	border-color: $sg-border;
-	color: $sg-default;
-	background-color: $sg-primary-bg;
+[#{$am}-sg-bg='secondary'] {
+	@extend %bg-secondary;
+}
+[#{$am}-sg-bg='action'] {
+	@extend %bg-action;
+}
+[#{$am}-sg-bg='success'] {
+	@extend %bg-success;
+}
+[#{$am}-sg-bg='error'] {
+	@extend %bg-error;
+}
+[#{$am}-sg-color='default'] {
+	@extend %color-default;
+}
+[#{$am}-sg-color='alternate'] {
+	@extend %color-alternate;
+}
+[#{$am}-sg-color='action'] {
+	@extend %color-action;
+}
+[#{$am}-sg-color='success'] {
+	@extend %color-success;
+}
+[#{$am}-sg-color='error'] {
+	@extend %color-error;
 }

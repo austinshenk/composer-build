@@ -1,92 +1,22 @@
-@import "reader-import";
-html {-webkit-text-size-adjust: none;}
-body {
-	background-color: $sg-primary-bg;
-	color: $sg-default;
-	font-family: 'Helvetica Neue', Helvetica, sans-serif;
-	margin: 0;
-	padding: 0;
-	line-height: 1.5;
-}
-#icon-import {
-	display: none;
-}
-h1, h2, h3, h4, h5, h6 {
-	font-weight: bold;
-    line-height: 1.25;
-    margin-top: 1em;
-    margin-bottom: .5em;
-}
-div {
-	position: relative;
-	display: inline-block;
-	opacity: 0;
-}
-article {
-	padding-bottom: 70px !important;
-}
-.transition-top {
-	-webkit-transition: top 500ms ease;
-       -moz-transition: top 500ms ease;
-         -o-transition: top 500ms ease;
-            transition: top 500ms ease;
-}
-.transition-left {
-	-webkit-transition: left 500ms ease;
-       -moz-transition: left 500ms ease;
-         -o-transition: left 500ms ease;
-            transition: left 500ms ease;
-}
-.transition-opacity {
-	-webkit-transition: opacity 500ms linear;
-       -moz-transition: opacity 500ms linear;
-         -o-transition: opacity 500ms linear;
-            transition: opacity 500ms linear;
-}
-.opacity-clear {
-	opacity: 0;
-}
-.overflow-hidden {
-	overflow: hidden;
-}
-.box-shadow {
-	box-shadow: 0 0 3px 2px rgba(0,0,0,.1);
-}
-.offscreen-top {
-	top: -100% !important;
-}
-.offscreen-left {
-	left: -100% !important;
-}
-.pointer-events-none {
-	pointer-events: none;
-}
-.pointer-events-all {
-	pointer-events: all;
-}
-.btn-icon {
-	display: inline-block;
-	height: 1em;
-	width: 1em;
-}
-.btn-outline .btn-icon {
-	fill: $sg-default;
-}
-.btn-outline:hover {
-	box-shadow: inset 0 0 0 2px $darken-1;
-}
-.btn-primary .btn-icon {
-	fill: $sg-alternate;
-}
-#article-cont {
-	height: 100%;
-}
-#tempo-cont {
-	bottom: 70px;
-}
-#shadow {
-	background-color: rgba(0,0,0,.5);
-}
-#overlay, #article-cont, nav {
-	font-size: 1em;
-}
+//Core Styles
+@import "style-guide-variables";
+@import "variables";
+@import "normalize";
+@import "default";
+//Third Party
+@import "../../node_modules/node-waves/src/scss/waves.scss";
+//Components
+@import "depth";
+@import "grid";
+@import "icons";
+@import "header";
+@import "form";
+@import "button";
+@import "nav";
+@import "popup";
+//Page specific
+@import "page/reader";
+//Utility
+@import "style-guide-classes";
+@import "utility";
+@import "js-utility";

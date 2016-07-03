@@ -1,0 +1,23 @@
+%offscreen {
+	position: absolute;
+	top: -9999px;
+    left: -9999px;
+}
+
+[#{$am}-utility~='full-width'] {
+	width: 100% !important;
+}
+[#{$am}-utility~='clearfix'] {
+  clear: both;
+}
+
+[#{$am}-align='left'] {
+	float: left;
+}
+[#{$am}-align='center'] {
+	transform: translateX(-50%);
+	margin-left: 50%;
+}
+[#{$am}-align='right'] {
+	float: right;
+}

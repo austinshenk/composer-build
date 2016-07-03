@@ -1,0 +1,44 @@
+html {
+ box-sizing: border-box;
+ -webkit-text-size-adjust: none;
+ font-size: $base-font-size;
+}
+*, *:before, *:after {
+ box-sizing: inherit;
+}
+body {
+  background-color: $sg-primary-bg;
+  color: $sg-default;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: $base-font-size;
+  margin: 0;
+  padding: 0;
+  line-height: $base-line-height;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: $spacing-medium;
+}
+
+ul {
+  [#{$am}-default] {
+    list-style-type: initial;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+	color: $sg-action;
+	text-decoration: none;
+
+  // Gets rid of tap active state
+  -webkit-tap-highlight-color: transparent;
+}

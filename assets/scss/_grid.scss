@@ -1,0 +1,48 @@
+$grid-cell-size: (100% / 12);
+
+[#{$am}-mod='grid'] {
+	box-sizing: border-box !important;
+	display: inline-block;
+	float: left;
+	
+	&, &[#{$am}-size='0'] {
+		width: 0;
+	}
+
+	&[#{$am}-size='1'] {
+		width: $grid-cell-size;
+	}
+	&[#{$am}-size='2'] {
+		width: 2 * $grid-cell-size;
+	}
+	&[#{$am}-size='3'] {
+		width: 3 * $grid-cell-size;
+	}
+	&[#{$am}-size='4'] {
+		width: 4 * $grid-cell-size;
+	}
+	&[#{$am}-size='5'] {
+		width: 5 * $grid-cell-size;
+	}
+	&[#{$am}-size='6'] {
+		width: 6 * $grid-cell-size;
+	}
+	&[#{$am}-size='7'] {
+		width: 7 * $grid-cell-size;
+	}
+	&[#{$am}-size='8'] {
+		width: 8 * $grid-cell-size;
+	}
+	&[#{$am}-size='9'] {
+		width: 9 * $grid-cell-size;
+	}
+	&[#{$am}-size='10'] {
+		width: 10 * $grid-cell-size;
+	}
+	&[#{$am}-size='11'] {
+		width: 11 * $grid-cell-size;
+	}
+	&[#{$am}-size='12'] {
+		width: 100%;
+	}
+}

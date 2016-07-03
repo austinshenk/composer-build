@@ -1,0 +1,45 @@
+$nav-height: 70px;
+body {
+	overflow: auto;
+}
+.node {
+	position: relative;
+	display: inline-block;
+	opacity: 0;
+}
+article {
+	padding-bottom: $nav-height !important;
+}
+#article-wrapper {
+	position: relative;
+	height: 100%;
+	overflow: auto;
+
+	& > article {
+		padding: $spacing-medium;
+	}
+}
+nav {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: $nav-height;
+	padding: $spacing-medium;
+}
+#popup-tempo {
+	& > [#{$am}-popup='menu'] {
+		padding: $spacing-medium;
+		max-width: 800px;
+
+		input {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&.open > [#{$am}-popup='menu'] {
+		height: 55px;
+		width: 95vw;
+	}
+}

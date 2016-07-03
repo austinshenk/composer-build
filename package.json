@@ -19,10 +19,13 @@
   "license": "MIT",
   "devDependencies": {
     "basscss-sass": "^4.0.0",
+    "materialize-css": "^0.97.6",
     "eslint": "^2.2.0",
     "node-sass": "^3.4.2",
     "svg-sprite-generator": "0.0.7",
     "svgo": "^0.6.1",
-    "uglify-js": "^2.6.2"
+    "uglify-js": "^2.6.2",
+    "normalize.css": "^4.1.1",
+    "node-waves": "^0.7.5"
   }
 }

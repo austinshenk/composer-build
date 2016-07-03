@@ -1,8 +1,41 @@
-//_btn-primay
-$button-color: #ffffff !default;
-$button-background-color: $sg-action !default;
+//Core
+$am: am;
 
-//media breakpoints
 $breakpoint-sm: '(min-width: 0)' !default;
 $breakpoint-md: '(min-width: 52em)' !default;
 $breakpoint-lg: '(min-width: 64em)' !default;
+
+$base-font-size: 15px;
+$base-line-height: 1.5;
+$border-radius: 3px;
+
+$spacing-xxsmall: .125rem;
+$spacing-xsmall: .25rem;
+$spacing-small: .5rem;
+$spacing-medium: 1rem;
+$spacing-large: 2rem;
+$spacing-xlarge: 4rem;
+$spacing-xxlarge: 6rem;
+
+$duration-fast: 250ms;
+$duration-normal: 500ms;
+$duration-slow: 750ms;
+$default-ease: ease-out;
+
+//Buttons
+$button-border: none !default;
+$button-color: $sg-black !default;
+$button-background-color: $sg-alternate !default;
+$button-font-size: 1.5rem !default;
+$button-height: 2.25rem !default;
+$button-padding: 0 $spacing-large !default;
+$button-radius: $border-radius !default;
+
+$button-primary-background-color: $sg-action !default;
+$button-primary-color: $sg-white !default;
+$button-primary-color-flat: $sg-action !default;
+
+$button-alternate-background-color: $sg-secondary-bg !default;
+
+$button-disabled-color: lighten($sg-black, 40%) !default;
+$button-disabled-background-color: lighten($sg-default, 40%) !default;

@@ -1,0 +1,59 @@
+[#{$am}-mod='form'] {
+	padding: 0 $spacing-medium;
+	width: 50%;
+	margin-bottom: $spacing-medium;
+}
+
+[#{$am}-mod='input'] {
+	position: relative;
+
+	& > input {
+		width: 100%;
+		height: 3rem;
+		margin-bottom: $spacing-medium;
+		background: transparent;
+		outline: none;
+		border: none;
+		border-bottom: 2px solid $sg-border;
+		padding: 0;
+
+		& + label {
+			color: $sg-border;
+		}
+
+		&:not([placeholder]) + label,
+		&:not([value]) + label {
+			top: 1rem;
+			font-size: 1rem;
+		}
+
+		&:focus + label,
+		&[placeholder] + label,
+		&[value] + label {
+			top: -.5rem;
+			font-size: .7rem;
+		}
+
+		&.valid {
+			border-bottom-color: $sg-success;
+		}
+
+		&.invalid {
+			border-bottom-color: $sg-error;
+		}
+
+		&:focus {
+			border-bottom-color: $sg-action;
+
+			& + label {
+				@extend %color-action;
+			}
+		}
+	}
+
+	& > label {
+		position: absolute;
+		left: 0;
+		transition: all 150ms;
+	}
+}

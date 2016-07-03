@@ -1,0 +1,109 @@
+$popup-menu-selector: "[" + $am + "-popup='menu']";
+
+[#{$am}-mod='popup'] {
+	//[#{$am}-popup='toggle'] {}
+	& > #{$popup-menu-selector} {
+		position: absolute;
+		display: inline-block;
+		z-index: 2;
+		@extend %bg-primary;
+		@extend %depth-1;
+	}
+
+	&[#{$am}-type='dropdown'] {
+		position: relative;
+		display: inline-block;
+
+		& > #{$popup-menu-selector} {
+			width: 0;
+			height: 0;
+			opacity: 0;
+			overflow: hidden;
+			border: 1px solid $sg-border;
+			transition: all $duration-normal $default-ease;
+		}
+
+		&[#{$am}-anchor^='top'] > #{$popup-menu-selector} {
+			top: 0;
+		}
+		&[#{$am}-anchor^='bottom'] > #{$popup-menu-selector} {
+			bottom: 0;
+		}
+		&[#{$am}-anchor$='left'] > #{$popup-menu-selector} {
+			left: 0;
+		}
+		&[#{$am}-anchor$='right'] > #{$popup-menu-selector} {
+			right: 0;
+		}
+
+		&[#{$am}-anchor='top'] > #{$popup-menu-selector},
+		&[#{$am}-anchor='bottom'] > #{$popup-menu-selector} {
+			width: 100%;
+		}
+
+		&.open > #{$popup-menu-selector}{
+			pointer-events: all;
+			opacity: 1;
+		}
+		&[#{$am}-anchor^='top'][#{$am}-float].open > #{$popup-menu-selector} {
+			top: 100%;
+			margin-top: $spacing-small;
+		}
+		&[#{$am}-anchor^='bottom'][#{$am}-float].open > #{$popup-menu-selector} {
+			bottom: 100%;
+			margin-bottom: $spacing-small;
+		}
+	}
+	&[#{$am}-type='modal'] {
+		position: fixed;
+		top: 0;
+		bottom: 100%;
+		left: 0;
+		right: 0;
+		overflow-x: hidden;
+		overflow-y: auto;
+		transition: bottom 0s $duration-normal;
+
+		& > [#{$am}-popup='overlay'] {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgba(0,0,0,0.5);
+			transition: opacity $duration-normal $default-ease;
+			opacity: 0;
+		}	
+
+		& > #{$popup-menu-selector} {
+			position: absolute;
+			top: 0;
+			left: $spacing-small;
+			right: $spacing-small;
+			display: inline-block;
+			max-width: 1000px;
+			margin: $spacing-small auto 0;
+			@extend %depth-1;
+			transition: top $duration-normal $default-ease;
+			top: -100vw;
+
+			& > [#{$am}-popup='controls'] {
+				border-top: 1px solid $sg-border;
+				padding: $spacing-small;
+			}
+		}
+
+		&.open {
+			bottom: 0;
+			transition: none;
+
+			& > #{$popup-menu-selector} {
+				top: 0;
+			}
+
+			& > [#{$am}-popup='overlay'] {
+				opacity: 1;
+			}
+		}
+	}
+}

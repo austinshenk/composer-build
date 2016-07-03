@@ -1,0 +1,19 @@
+[#{$am}-mod='header'] {
+	@extend %color-action;
+
+	&[#{$am}-type='page'] {
+		font-size: 2rem;
+	}
+	&[#{$am}-type='form'] {
+		font-size: 1.5rem;
+	}
+	&[#{$am}-type='section'] {
+		font-size: 1.2rem;
+	}
+
+	&[#{$am}-render='block'] {
+		@extend %bg-action;
+		@extend %color-alternate;
+		padding: $spacing-medium;
+	}
+}

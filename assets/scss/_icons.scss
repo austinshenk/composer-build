@@ -1,0 +1,20 @@
+[#{$am}-mod='icon'] {
+	line-height: inherit;
+
+	&[#{$am}-size='1'] {
+		height: 1rem;
+		width: 1rem;
+	}
+	&[#{$am}-size='2'] {
+		height: 2rem;
+		width: 2rem;
+	}
+	&[#{$am}-size='3'] {
+		height: 4rem;
+		width: 4rem;
+	}
+	&[#{$am}-size='4'] {
+		height: 6rem;
+		width: 6rem;
+	}
+}
